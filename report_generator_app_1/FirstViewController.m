@@ -18,9 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [SampleSingletonClass sharedInstance].companyName = self.companyNameTextField.text;
-    [SampleSingletonClass sharedInstance].address = self.addressTextField.text;
-    [SampleSingletonClass sharedInstance].field = self.fieldTextField.text;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +27,14 @@
 - (IBAction)nextButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"fromGenToYearSegue" sender:nil];
 }
+
+#pragma mark - TextField Definitions
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [SampleSingletonClass sharedInstance].companyName = self.companyNameTextField.text;
+    [SampleSingletonClass sharedInstance].address = self.addressTextField.text;
+    [SampleSingletonClass sharedInstance].field = self.fieldTextField.text;
+}
+
 /*
 #pragma mark - Navigation
 

@@ -7,6 +7,8 @@
 //
 
 #import "FinalPageViewController.h"
+#import "ViewController.h"
+#import <Parse/Parse.h>
 
 @interface FinalPageViewController ()
 
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.destinationMailLabel.text = [PFUser currentUser].email;
 }
 
 - (void)didReceiveMemoryWarning {

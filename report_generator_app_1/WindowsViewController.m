@@ -76,6 +76,13 @@
         return nil;
 }
 
+#pragma mark - TextField Definitions
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [SampleSingletonClass sharedInstance].windowQuantity = self.windowQuantityTextField.text;
+    [SampleSingletonClass sharedInstance].doorQuantity = self.doorQuantityTextField.text;
+}
+
+
 #pragma mark - NextButton
 - (IBAction)nextButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"fromWindowToLightingSegue" sender:nil];

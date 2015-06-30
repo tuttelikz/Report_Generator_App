@@ -7,15 +7,21 @@
 //
 
 #import "LightingViewController.h"
+#import "SampleSingletonClass.h"
 
-@interface LightingViewController ()
+@interface LightingViewController () <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
+@property (strong, nonatomic) NSArray *lightingTypePickerData;
 @end
 
 @implementation LightingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _lightingTypePickerData = @[@"Накаливания", @"Энергосберегающие", @"Светодиодные"];
+    self.lightingTypePickerView.delegate = self;  //delegation Window
+    self.lightingTypePickerView.dataSource = self;
+    self.lightingQuantityTextField.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -23,6 +29,33 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - PickerView Singletone
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+        int row_lighting = [self.lightingTypePickerView selectedRowInComponent:0];
+        [SampleSingletonClass sharedInstance].lightingType = [_lightingTypePickerData objectAtIndex:row_lighting];
+    }
+
+#pragma mark - PickerView Definitions
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+        return _lightingTypePickerData.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+        return _lightingTypePickerData[row];
+}
+
+#pragma mark - TextField Definitions
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [SampleSingletonClass sharedInstance].lightingQuantity = self.lightingQuantityTextField.text;
+}
+
+#pragma mark - NextButton
+
 - (IBAction)nextButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"fromLightingToNotesSegue" sender:nil];
 }

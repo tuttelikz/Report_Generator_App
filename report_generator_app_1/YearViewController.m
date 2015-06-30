@@ -65,7 +65,7 @@
 
 #pragma mark - YearTextField
 
-- (void)textFieldDidBeginEditing:(UITextField *)yearTextField {
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     [SampleSingletonClass sharedInstance].year = self.yearTextField.text;
 }
 

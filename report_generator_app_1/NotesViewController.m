@@ -7,8 +7,10 @@
 //
 
 #import "NotesViewController.h"
+#import "SampleSingletonClass.h"
+#import <UIKit/UIKit.h>
 
-@interface NotesViewController ()
+@interface NotesViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate>
 
 @end
 
@@ -17,12 +19,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.notesTextField.delegate = self;   //should also do smth with imageView
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - TextField Definitions
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [SampleSingletonClass sharedInstance].notesComments = self.notesTextField.text;
+    [SampleSingletonClass sharedInstance].notesImage = self.notesImageView.image;
+}
+
+#pragma mark - FinishButton
 - (IBAction)finishButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"fromNotesToFinalSegue" sender:nil];
 }
