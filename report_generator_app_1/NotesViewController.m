@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NotesViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -19,7 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.notesTextField.delegate = self;   //should also do smth with imageView
+    self.notesTextField.delegate = self;   //should also do smth with imageView\
+    
+    self.imageView.image = [UIImage imageNamed:@"add_company.png"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

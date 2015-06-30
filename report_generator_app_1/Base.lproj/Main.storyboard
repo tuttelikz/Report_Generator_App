@@ -308,9 +308,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0v9-Nc-pKv">
-                                <rect key="frame" x="-16" y="112" width="336" height="129"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Фото" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuR-bB-aNv">
                                 <rect key="frame" x="44" y="69" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -338,19 +335,22 @@
                                     <action selector="finishButtonPressed:" destination="5MX-lP-cpo" eventType="touchUpInside" id="Goo-TH-I39"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHE-Nn-h5P">
+                                <rect key="frame" x="56" y="138" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.61960784313725492" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="lMD-0k-UDB"/>
                     <connections>
-                        <outlet property="notesImageView" destination="0v9-Nc-pKv" id="s8Z-dR-swx"/>
+                        <outlet property="imageView" destination="bHE-Nn-h5P" id="z6d-bu-xe2"/>
                         <outlet property="notesTextField" destination="1e2-uo-KJf" id="GLH-zt-Zjb"/>
                         <segue destination="4Mi-7p-48r" kind="push" identifier="fromNotesToFinalSegue" id="mEh-FG-ED5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvb-5K-S4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2884" y="342"/>
+            <point key="canvasLocation" x="2848" y="342"/>
         </scene>
         <!--Final Page View Controller-->
         <scene sceneID="iFO-7a-be8">

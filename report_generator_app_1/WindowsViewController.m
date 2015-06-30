@@ -20,13 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _windowTypePickerData = @[@"Дерево", @"Пластик", @"Металлопластик"];
+    _windowTypePickerData = @[@"Пластик", @"Металлопластик", @"Дерево", ];
+    _doorTypePickerData = @[@"Дерево", @"Пластик", @"Металлопластик", @"Железо"];
     self.windowTypePickerView.delegate = self;  //delegation Window
     self.windowTypePickerView.dataSource = self;
     self.windowQuantityTextField.delegate = self;
     self.doorTypePickerView.delegate = self; //delegation Door
     self.doorTypePickerView.dataSource = self;
     self.doorQuantityTextField.delegate = self;
+    self.windowTypePickerView.tag = 1;
+    self.doorTypePickerView.tag = 2;
     
 }
 
@@ -37,14 +40,14 @@
 
 
 #pragma mark - PickerView Singletone
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    if ([pickerView isEqual:self.windowTypePickerData]) {
-        int row_window = [self.windowTypePickerView selectedRowInComponent:0];
-        [SampleSingletonClass sharedInstance].windowType = [_windowTypePickerData objectAtIndex:row_window];
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)row {
+    if ([pickerView isEqual:self.windowTypePickerView]) {
+        row = [self.windowTypePickerView selectedRowInComponent:0];
+        [SampleSingletonClass sharedInstance].windowType = [_windowTypePickerData objectAtIndex:row];
     }
-    else if ([pickerView isEqual:self.doorTypePickerData]) {
-        int row_door = [self.windowTypePickerView selectedRowInComponent:0];
-        [SampleSingletonClass sharedInstance].doorType = [_doorTypePickerData objectAtIndex:row_door];
+    else if ([pickerView isEqual:self.doorTypePickerView]) {
+        row = [self.doorTypePickerView selectedRowInComponent:0];
+        [SampleSingletonClass sharedInstance].doorType = [_doorTypePickerData objectAtIndex:row];
     }
 }
 
@@ -55,25 +58,27 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    if ([pickerView isEqual:self.windowTypePickerData]) {
+    if ([pickerView isEqual:self.windowTypePickerView]) {
         return _windowTypePickerData.count;
     }
-    else if ([pickerView isEqual:self.doorTypePickerData]) {
+    else if ([pickerView isEqual:self.doorTypePickerView]) {
         return _doorTypePickerData.count;
     }
     else
-        return nil;
+        return 0;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    if ([UIPickerView isEqual:self.windowTypePickerData]) {
+    
+    if (pickerView.tag == 1){
         return _windowTypePickerData[row];
     }
-    else if ([UIPickerView isEqual:self.doorTypePickerData]) {
+    
+    else if(pickerView.tag == 2) {
         return _doorTypePickerData[row];
     }
     else
-        return nil;
+        return @"hiii";
 }
 
 #pragma mark - TextField Definitions

@@ -67,6 +67,8 @@
 		51EAE5091B42574600D06602 /* Bitmap_letter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap_letter.png; sourceTree = SOURCE_ROOT; };
 		51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleSingletonClass.h; sourceTree = "<group>"; };
 		51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSingletonClass.m; sourceTree = "<group>"; };
+		51EAE50D1B429B7800D06602 /* blank_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blank_image.jpg; sourceTree = SOURCE_ROOT; };
+		51EAE50E1B42A18D00D06602 /* add_company.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_company.png; sourceTree = SOURCE_ROOT; };
 		C44F92E73E86623B1BD77289 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +121,6 @@
 				51339E2C1B4152B300B1D217 /* ViewController.m */,
 				51339E4B1B416F1800B1D217 /* YearViewController.h */,
 				51339E4C1B416F1800B1D217 /* YearViewController.m */,
-				51EAE5091B42574600D06602 /* Bitmap_letter.png */,
 				51339E2E1B4152B300B1D217 /* Main.storyboard */,
 				51339E5D1B417EF800B1D217 /* FirstViewController.h */,
 				51339E5E1B417EF800B1D217 /* FirstViewController.m */,
@@ -132,7 +133,6 @@
 				51339E4E1B416F3000B1D217 /* WindowsViewController.h */,
 				51339E4F1B416F3000B1D217 /* WindowsViewController.m */,
 				51339E311B4152B300B1D217 /* Images.xcassets */,
-				51EAE5081B4252F900D06602 /* edited_logo.png */,
 				51339E331B4152B300B1D217 /* LaunchScreen.xib */,
 				51339E241B4152B300B1D217 /* Supporting Files */,
 				51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */,
@@ -144,6 +144,10 @@
 		51339E241B4152B300B1D217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				51EAE50E1B42A18D00D06602 /* add_company.png */,
+				51EAE5091B42574600D06602 /* Bitmap_letter.png */,
+				51EAE5081B4252F900D06602 /* edited_logo.png */,
+				51EAE50D1B429B7800D06602 /* blank_image.jpg */,
 				51339E251B4152B300B1D217 /* Info.plist */,
 				51339E261B4152B300B1D217 /* main.m */,
 			);
