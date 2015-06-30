@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3400E72528C2C7A9FCB162DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1BA356402BE24068494C7C /* libPods.a */; };
 		51339E271B4152B300B1D217 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E261B4152B300B1D217 /* main.m */; };
 		51339E2A1B4152B300B1D217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E291B4152B300B1D217 /* AppDelegate.m */; };
 		51339E2D1B4152B300B1D217 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E2C1B4152B300B1D217 /* ViewController.m */; };
@@ -14,6 +15,13 @@
 		51339E321B4152B300B1D217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51339E311B4152B300B1D217 /* Images.xcassets */; };
 		51339E351B4152B300B1D217 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51339E331B4152B300B1D217 /* LaunchScreen.xib */; };
 		51339E411B4152B300B1D217 /* report_generator_app_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E401B4152B300B1D217 /* report_generator_app_1Tests.m */; };
+		51339E4D1B416F1800B1D217 /* YearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E4C1B416F1800B1D217 /* YearViewController.m */; };
+		51339E501B416F3000B1D217 /* WindowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E4F1B416F3000B1D217 /* WindowsViewController.m */; };
+		51339E531B416F4800B1D217 /* LightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E521B416F4800B1D217 /* LightingViewController.m */; };
+		51339E561B416F6D00B1D217 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E551B416F6D00B1D217 /* NotesViewController.m */; };
+		51339E591B416F9A00B1D217 /* FinalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E581B416F9A00B1D217 /* FinalPageViewController.m */; };
+		51339E5F1B417EF800B1D217 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E5E1B417EF800B1D217 /* FirstViewController.m */; };
+		51EAE50C1B425A0200D06602 /* SampleSingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1BA356402BE24068494C7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C623AD5041462A027A7555 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		51339E211B4152B300B1D217 /* report_generator_app_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = report_generator_app_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51339E251B4152B300B1D217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51339E261B4152B300B1D217 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +50,24 @@
 		51339E3A1B4152B300B1D217 /* report_generator_app_1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = report_generator_app_1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51339E3F1B4152B300B1D217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51339E401B4152B300B1D217 /* report_generator_app_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = report_generator_app_1Tests.m; sourceTree = "<group>"; };
+		51339E4A1B41548400B1D217 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		51339E4B1B416F1800B1D217 /* YearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearViewController.h; sourceTree = "<group>"; };
+		51339E4C1B416F1800B1D217 /* YearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearViewController.m; sourceTree = "<group>"; };
+		51339E4E1B416F3000B1D217 /* WindowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsViewController.h; sourceTree = "<group>"; };
+		51339E4F1B416F3000B1D217 /* WindowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowsViewController.m; sourceTree = "<group>"; };
+		51339E511B416F4800B1D217 /* LightingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightingViewController.h; sourceTree = "<group>"; };
+		51339E521B416F4800B1D217 /* LightingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightingViewController.m; sourceTree = "<group>"; };
+		51339E541B416F6D00B1D217 /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
+		51339E551B416F6D00B1D217 /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
+		51339E571B416F9A00B1D217 /* FinalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalPageViewController.h; sourceTree = "<group>"; };
+		51339E581B416F9A00B1D217 /* FinalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalPageViewController.m; sourceTree = "<group>"; };
+		51339E5D1B417EF800B1D217 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		51339E5E1B417EF800B1D217 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		51EAE5081B4252F900D06602 /* edited_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edited_logo.png; path = "../../../../Desktop/KazExp Work/Site/design/edited_logo.png"; sourceTree = "<group>"; };
+		51EAE5091B42574600D06602 /* Bitmap_letter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap_letter.png; sourceTree = SOURCE_ROOT; };
+		51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleSingletonClass.h; sourceTree = "<group>"; };
+		51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSingletonClass.m; sourceTree = "<group>"; };
+		C44F92E73E86623B1BD77289 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3400E72528C2C7A9FCB162DB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +92,12 @@
 		51339E181B4152B300B1D217 = {
 			isa = PBXGroup;
 			children = (
+				51339E4A1B41548400B1D217 /* Podfile */,
 				51339E231B4152B300B1D217 /* report_generator_app_1 */,
 				51339E3D1B4152B300B1D217 /* report_generator_app_1Tests */,
 				51339E221B4152B300B1D217 /* Products */,
+				64F5736A1B0B80CAD621BA09 /* Pods */,
+				BEC9A9C387C492AFD58A368D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,10 +117,26 @@
 				51339E291B4152B300B1D217 /* AppDelegate.m */,
 				51339E2B1B4152B300B1D217 /* ViewController.h */,
 				51339E2C1B4152B300B1D217 /* ViewController.m */,
+				51339E4B1B416F1800B1D217 /* YearViewController.h */,
+				51339E4C1B416F1800B1D217 /* YearViewController.m */,
+				51EAE5091B42574600D06602 /* Bitmap_letter.png */,
 				51339E2E1B4152B300B1D217 /* Main.storyboard */,
+				51339E5D1B417EF800B1D217 /* FirstViewController.h */,
+				51339E5E1B417EF800B1D217 /* FirstViewController.m */,
+				51339E571B416F9A00B1D217 /* FinalPageViewController.h */,
+				51339E581B416F9A00B1D217 /* FinalPageViewController.m */,
+				51339E541B416F6D00B1D217 /* NotesViewController.h */,
+				51339E551B416F6D00B1D217 /* NotesViewController.m */,
+				51339E511B416F4800B1D217 /* LightingViewController.h */,
+				51339E521B416F4800B1D217 /* LightingViewController.m */,
+				51339E4E1B416F3000B1D217 /* WindowsViewController.h */,
+				51339E4F1B416F3000B1D217 /* WindowsViewController.m */,
 				51339E311B4152B300B1D217 /* Images.xcassets */,
+				51EAE5081B4252F900D06602 /* edited_logo.png */,
 				51339E331B4152B300B1D217 /* LaunchScreen.xib */,
 				51339E241B4152B300B1D217 /* Supporting Files */,
+				51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */,
+				51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */,
 			);
 			path = report_generator_app_1;
 			sourceTree = "<group>";
@@ -119,6 +167,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		64F5736A1B0B80CAD621BA09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15C623AD5041462A027A7555 /* Pods.debug.xcconfig */,
+				C44F92E73E86623B1BD77289 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEC9A9C387C492AFD58A368D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B1BA356402BE24068494C7C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51339E441B4152B300B1D217 /* Build configuration list for PBXNativeTarget "report_generator_app_1" */;
 			buildPhases = (
+				82FC96B57EED7144781AD88A /* Check Pods Manifest.lock */,
 				51339E1D1B4152B300B1D217 /* Sources */,
 				51339E1E1B4152B300B1D217 /* Frameworks */,
 				51339E1F1B4152B300B1D217 /* Resources */,
+				DAB09BABC60DD15A67B31F8A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +281,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82FC96B57EED7144781AD88A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB09BABC60DD15A67B31F8A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51339E1D1B4152B300B1D217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51339E531B416F4800B1D217 /* LightingViewController.m in Sources */,
+				51339E501B416F3000B1D217 /* WindowsViewController.m in Sources */,
+				51339E591B416F9A00B1D217 /* FinalPageViewController.m in Sources */,
 				51339E2D1B4152B300B1D217 /* ViewController.m in Sources */,
 				51339E2A1B4152B300B1D217 /* AppDelegate.m in Sources */,
+				51339E561B416F6D00B1D217 /* NotesViewController.m in Sources */,
+				51339E5F1B417EF800B1D217 /* FirstViewController.m in Sources */,
+				51EAE50C1B425A0200D06602 /* SampleSingletonClass.m in Sources */,
 				51339E271B4152B300B1D217 /* main.m in Sources */,
+				51339E4D1B416F1800B1D217 /* YearViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +452,7 @@
 		};
 		51339E451B4152B300B1D217 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15C623AD5041462A027A7555 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = report_generator_app_1/Info.plist;
@@ -355,6 +463,7 @@
 		};
 		51339E461B4152B300B1D217 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44F92E73E86623B1BD77289 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = report_generator_app_1/Info.plist;
@@ -416,6 +525,7 @@
 				51339E461B4152B300B1D217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51339E471B4152B300B1D217 /* Build configuration list for PBXNativeTarget "report_generator_app_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +534,7 @@
 				51339E491B4152B300B1D217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
