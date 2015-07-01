@@ -22,6 +22,9 @@
 		51339E591B416F9A00B1D217 /* FinalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E581B416F9A00B1D217 /* FinalPageViewController.m */; };
 		51339E5F1B417EF800B1D217 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E5E1B417EF800B1D217 /* FirstViewController.m */; };
 		51EAE50C1B425A0200D06602 /* SampleSingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */; };
+		51EF87E71B43DE5600B79C05 /* PdfDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EF87E61B43DE5600B79C05 /* PdfDocViewController.m */; };
+		51EF87E91B43E12200B79C05 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF87E81B43E12200B79C05 /* CoreText.framework */; };
+		51EF87EC1B43E4B900B79C05 /* PDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EF87EB1B43E4B900B79C05 /* PDFRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +66,14 @@
 		51339E581B416F9A00B1D217 /* FinalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalPageViewController.m; sourceTree = "<group>"; };
 		51339E5D1B417EF800B1D217 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		51339E5E1B417EF800B1D217 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		51EAE5081B4252F900D06602 /* edited_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edited_logo.png; path = "../../../../Desktop/KazExp Work/Site/design/edited_logo.png"; sourceTree = "<group>"; };
-		51EAE5091B42574600D06602 /* Bitmap_letter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bitmap_letter.png; sourceTree = SOURCE_ROOT; };
 		51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleSingletonClass.h; sourceTree = "<group>"; };
 		51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSingletonClass.m; sourceTree = "<group>"; };
-		51EAE50D1B429B7800D06602 /* blank_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blank_image.jpg; sourceTree = SOURCE_ROOT; };
-		51EAE50E1B42A18D00D06602 /* add_company.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_company.png; sourceTree = SOURCE_ROOT; };
+		51EAE50F1B42A53C00D06602 /* edited_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edited_logo.png; path = "../../../../Desktop/KazExp Work/Site/design/edited_logo.png"; sourceTree = "<group>"; };
+		51EF87E51B43DE5600B79C05 /* PdfDocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfDocViewController.h; sourceTree = "<group>"; };
+		51EF87E61B43DE5600B79C05 /* PdfDocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdfDocViewController.m; sourceTree = "<group>"; };
+		51EF87E81B43E12200B79C05 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		51EF87EA1B43E4B900B79C05 /* PDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFRenderer.h; sourceTree = "<group>"; };
+		51EF87EB1B43E4B900B79C05 /* PDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFRenderer.m; sourceTree = "<group>"; };
 		C44F92E73E86623B1BD77289 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EF87E91B43E12200B79C05 /* CoreText.framework in Frameworks */,
 				3400E72528C2C7A9FCB162DB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +128,10 @@
 				51339E4B1B416F1800B1D217 /* YearViewController.h */,
 				51339E4C1B416F1800B1D217 /* YearViewController.m */,
 				51339E2E1B4152B300B1D217 /* Main.storyboard */,
+				51EF87E51B43DE5600B79C05 /* PdfDocViewController.h */,
+				51EF87EA1B43E4B900B79C05 /* PDFRenderer.h */,
+				51EF87EB1B43E4B900B79C05 /* PDFRenderer.m */,
+				51EF87E61B43DE5600B79C05 /* PdfDocViewController.m */,
 				51339E5D1B417EF800B1D217 /* FirstViewController.h */,
 				51339E5E1B417EF800B1D217 /* FirstViewController.m */,
 				51339E571B416F9A00B1D217 /* FinalPageViewController.h */,
@@ -133,6 +143,7 @@
 				51339E4E1B416F3000B1D217 /* WindowsViewController.h */,
 				51339E4F1B416F3000B1D217 /* WindowsViewController.m */,
 				51339E311B4152B300B1D217 /* Images.xcassets */,
+				51EAE50F1B42A53C00D06602 /* edited_logo.png */,
 				51339E331B4152B300B1D217 /* LaunchScreen.xib */,
 				51339E241B4152B300B1D217 /* Supporting Files */,
 				51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */,
@@ -144,10 +155,6 @@
 		51339E241B4152B300B1D217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				51EAE50E1B42A18D00D06602 /* add_company.png */,
-				51EAE5091B42574600D06602 /* Bitmap_letter.png */,
-				51EAE5081B4252F900D06602 /* edited_logo.png */,
-				51EAE50D1B429B7800D06602 /* blank_image.jpg */,
 				51339E251B4152B300B1D217 /* Info.plist */,
 				51339E261B4152B300B1D217 /* main.m */,
 			);
@@ -183,6 +190,7 @@
 		BEC9A9C387C492AFD58A368D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51EF87E81B43E12200B79C05 /* CoreText.framework */,
 				0B1BA356402BE24068494C7C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -324,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51339E531B416F4800B1D217 /* LightingViewController.m in Sources */,
+				51EF87EC1B43E4B900B79C05 /* PDFRenderer.m in Sources */,
 				51339E501B416F3000B1D217 /* WindowsViewController.m in Sources */,
 				51339E591B416F9A00B1D217 /* FinalPageViewController.m in Sources */,
 				51339E2D1B4152B300B1D217 /* ViewController.m in Sources */,
@@ -332,6 +341,7 @@
 				51339E5F1B417EF800B1D217 /* FirstViewController.m in Sources */,
 				51EAE50C1B425A0200D06602 /* SampleSingletonClass.m in Sources */,
 				51339E271B4152B300B1D217 /* main.m in Sources */,
+				51EF87E71B43DE5600B79C05 /* PdfDocViewController.m in Sources */,
 				51339E4D1B416F1800B1D217 /* YearViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
