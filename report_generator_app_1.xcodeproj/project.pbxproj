@@ -22,9 +22,9 @@
 		51339E591B416F9A00B1D217 /* FinalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E581B416F9A00B1D217 /* FinalPageViewController.m */; };
 		51339E5F1B417EF800B1D217 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51339E5E1B417EF800B1D217 /* FirstViewController.m */; };
 		51EAE50C1B425A0200D06602 /* SampleSingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */; };
-		51EF87E71B43DE5600B79C05 /* PdfDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EF87E61B43DE5600B79C05 /* PdfDocViewController.m */; };
 		51EF87E91B43E12200B79C05 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF87E81B43E12200B79C05 /* CoreText.framework */; };
-		51EF87EC1B43E4B900B79C05 /* PDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EF87EB1B43E4B900B79C05 /* PDFRenderer.m */; };
+		51EFCAE51B44E9A00065F8F8 /* PdfDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EFCAE21B44E9A00065F8F8 /* PdfDocViewController.m */; };
+		51EFCAE61B44E9A00065F8F8 /* PDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EFCAE41B44E9A00065F8F8 /* PDFRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,7 @@
 		51339E3A1B4152B300B1D217 /* report_generator_app_1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = report_generator_app_1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51339E3F1B4152B300B1D217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51339E401B4152B300B1D217 /* report_generator_app_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = report_generator_app_1Tests.m; sourceTree = "<group>"; };
-		51339E4A1B41548400B1D217 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		51339E4A1B41548400B1D217 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		51339E4B1B416F1800B1D217 /* YearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearViewController.h; sourceTree = "<group>"; };
 		51339E4C1B416F1800B1D217 /* YearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearViewController.m; sourceTree = "<group>"; };
 		51339E4E1B416F3000B1D217 /* WindowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsViewController.h; sourceTree = "<group>"; };
@@ -69,11 +69,12 @@
 		51EAE50A1B425A0200D06602 /* SampleSingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleSingletonClass.h; sourceTree = "<group>"; };
 		51EAE50B1B425A0200D06602 /* SampleSingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSingletonClass.m; sourceTree = "<group>"; };
 		51EAE50F1B42A53C00D06602 /* edited_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edited_logo.png; path = "../../../../Desktop/KazExp Work/Site/design/edited_logo.png"; sourceTree = "<group>"; };
-		51EF87E51B43DE5600B79C05 /* PdfDocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfDocViewController.h; sourceTree = "<group>"; };
-		51EF87E61B43DE5600B79C05 /* PdfDocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdfDocViewController.m; sourceTree = "<group>"; };
 		51EF87E81B43E12200B79C05 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		51EF87EA1B43E4B900B79C05 /* PDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFRenderer.h; sourceTree = "<group>"; };
-		51EF87EB1B43E4B900B79C05 /* PDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFRenderer.m; sourceTree = "<group>"; };
+		51EFCAE11B44E9A00065F8F8 /* PdfDocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfDocViewController.h; sourceTree = "<group>"; };
+		51EFCAE21B44E9A00065F8F8 /* PdfDocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdfDocViewController.m; sourceTree = "<group>"; };
+		51EFCAE31B44E9A00065F8F8 /* PDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFRenderer.h; sourceTree = "<group>"; };
+		51EFCAE41B44E9A00065F8F8 /* PDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFRenderer.m; sourceTree = "<group>"; };
+		51EFCAE71B44F2C70065F8F8 /* logo_sun_kazakh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_sun_kazakh.png; path = "../../../../Desktop/KazExp Work/Site/Certificates/logo_sun_kazakh.png"; sourceTree = "<group>"; };
 		C44F92E73E86623B1BD77289 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,11 +128,11 @@
 				51339E2C1B4152B300B1D217 /* ViewController.m */,
 				51339E4B1B416F1800B1D217 /* YearViewController.h */,
 				51339E4C1B416F1800B1D217 /* YearViewController.m */,
+				51EFCAE11B44E9A00065F8F8 /* PdfDocViewController.h */,
+				51EFCAE21B44E9A00065F8F8 /* PdfDocViewController.m */,
+				51EFCAE31B44E9A00065F8F8 /* PDFRenderer.h */,
+				51EFCAE41B44E9A00065F8F8 /* PDFRenderer.m */,
 				51339E2E1B4152B300B1D217 /* Main.storyboard */,
-				51EF87E51B43DE5600B79C05 /* PdfDocViewController.h */,
-				51EF87EA1B43E4B900B79C05 /* PDFRenderer.h */,
-				51EF87EB1B43E4B900B79C05 /* PDFRenderer.m */,
-				51EF87E61B43DE5600B79C05 /* PdfDocViewController.m */,
 				51339E5D1B417EF800B1D217 /* FirstViewController.h */,
 				51339E5E1B417EF800B1D217 /* FirstViewController.m */,
 				51339E571B416F9A00B1D217 /* FinalPageViewController.h */,
@@ -155,6 +156,7 @@
 		51339E241B4152B300B1D217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				51EFCAE71B44F2C70065F8F8 /* logo_sun_kazakh.png */,
 				51339E251B4152B300B1D217 /* Info.plist */,
 				51339E261B4152B300B1D217 /* main.m */,
 			);
@@ -332,7 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51339E531B416F4800B1D217 /* LightingViewController.m in Sources */,
-				51EF87EC1B43E4B900B79C05 /* PDFRenderer.m in Sources */,
+				51EFCAE61B44E9A00065F8F8 /* PDFRenderer.m in Sources */,
 				51339E501B416F3000B1D217 /* WindowsViewController.m in Sources */,
 				51339E591B416F9A00B1D217 /* FinalPageViewController.m in Sources */,
 				51339E2D1B4152B300B1D217 /* ViewController.m in Sources */,
@@ -341,7 +343,7 @@
 				51339E5F1B417EF800B1D217 /* FirstViewController.m in Sources */,
 				51EAE50C1B425A0200D06602 /* SampleSingletonClass.m in Sources */,
 				51339E271B4152B300B1D217 /* main.m in Sources */,
-				51EF87E71B43DE5600B79C05 /* PdfDocViewController.m in Sources */,
+				51EFCAE51B44E9A00065F8F8 /* PdfDocViewController.m in Sources */,
 				51339E4D1B416F1800B1D217 /* YearViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

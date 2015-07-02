@@ -1,40 +1,79 @@
 //
-//  PdfDocViewController.m
-//  report_generator_app_1
+//  PDFViewController.m
+//  PDFRenderer
 //
-//  Created by Sanzhar Askaruly on 7/1/15.
-//  Copyright (c) 2015 Sanzhar Askaruly. All rights reserved.
+//  Created by Ray Wenderlich on 12/5/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "PdfDocViewController.h"
 #import "PDFRenderer.h"
+#import "SampleSingletonClass.h"
 
-
-@interface PdfDocViewController ()
-
-@end
 
 @implementation PdfDocViewController
 
-- (void)viewDidLoad {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [self didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
+
+/*
+ // Implement loadView to create a view hierarchy programmatically, without using a nib.
+ - (void)loadView
+ {
+ }
+ */
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     NSString* fileName = [self getPDFFileName];
     [PDFRenderer drawText:fileName];
-    
-    // Do any additional setup after loading the view.
-    
-    [self drawText];
     [self showPDFFile];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidUnload
+{
+    [self viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
+-(NSString*)getPDFFileName
+{
+    NSString* fileName = @"Invoice.PDF";
+    
+    NSArray *arrayPaths =
+    NSSearchPathForDirectoriesInDomains(
+                                        NSDocumentDirectory,
+                                        NSUserDomainMask,
+                                        YES);
+    NSString *path = [arrayPaths objectAtIndex:0];
+    NSString* pdfFileName = [path stringByAppendingPathComponent:fileName];
+    
+    return pdfFileName;
+    
+}
 
+#pragma mark - Create File with "Hello World"
 
--(void)drawText
++(void)drawText    //was changed from minus to plus
 {
     NSString* fileName = @"Invoice.PDF";
     
@@ -94,24 +133,7 @@
 
 
 
-
-
-
--(NSString*)getPDFFileName
-{
-    NSString* fileName = @"Invoice.PDF";
-    
-    NSArray *arrayPaths =
-    NSSearchPathForDirectoriesInDomains(
-                                        NSDocumentDirectory,
-                                        NSUserDomainMask,
-                                        YES);
-    NSString *path = [arrayPaths objectAtIndex:0];
-    NSString* pdfFileName = [path stringByAppendingPathComponent:fileName];
-    
-    return pdfFileName;
-    
-}
+#pragma mark - PDF View
 
 -(void)showPDFFile
 {
@@ -135,17 +157,39 @@
     [self.view addSubview:webView];
 }
 
+#pragma mark - Draw PDF
++(void)drawPDF:(NSString*)fileName
+{
+    // Create the PDF context using the default page size of 612 x 792.
+    UIGraphicsBeginPDFContextToFile(fileName, CGRectZero, nil);
+    // Mark the beginning of a new page.
+    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 612, 792), nil);
+    
+    CGPoint from = CGPointMake(0, 0);
+    CGPoint to = CGPointMake(200, 300);
+    [PDFRenderer drawLineFromPoint:from toPoint:to];
 
-
+    [self drawText];
+    // Close the PDF context and write the contents out.
+    UIGraphicsEndPDFContext();
+}
 
 /*
-#pragma mark - Navigation
+ // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+ - (void)viewDidLoad
+ {
+ [super viewDidLoad];
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Draw the Logo
++(void)drawImage:(UIImage*)image inRect:(CGRect)rect
+{
+    [image drawInRect:rect];
+    
 }
-*/
+
+
+
 
 @end

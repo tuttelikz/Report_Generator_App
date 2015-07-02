@@ -11,5 +11,7 @@
 
 
 @interface PdfDocViewController : UIViewController
++(void)drawImage:(UIImage*)image inRect:(CGRect)rect;
+
 
 @end

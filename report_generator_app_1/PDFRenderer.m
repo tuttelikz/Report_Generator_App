@@ -10,23 +10,12 @@
 #import <UIKit/UIKit.h>
 @implementation PDFRenderer
 
-
 +(void)drawText:(NSString *)pdfFileName
 {
-    NSString* fileName = @"Report.PDF";
-    
-    NSArray *arrayPaths =
-    NSSearchPathForDirectoriesInDomains(
-                                        NSDocumentDirectory,
-                                        NSUserDomainMask,
-                                        YES);
-    NSString *path = [arrayPaths objectAtIndex:0];
-    pdfFileName = [path stringByAppendingPathComponent:fileName];
     
     NSString* textToDraw = @"Hello World";
     CFStringRef stringRef = (__bridge CFStringRef)textToDraw;
-    
-    // Prepare the text using a Core Text Framesetter.
+    // Prepare the text using a Core Text Framesetter
     CFAttributedStringRef currentText = CFAttributedStringCreate(NULL, stringRef, NULL);
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(currentText);
     
@@ -38,12 +27,6 @@
     CFRange currentRange = CFRangeMake(0, 0);
     CTFrameRef frameRef = CTFramesetterCreateFrame(framesetter, currentRange, framePath, NULL);
     CGPathRelease(framePath);
-    
-    // Create the PDF context using the default page size of 612 x 792.
-    UIGraphicsBeginPDFContextToFile(pdfFileName, CGRectZero, nil);
-    
-    // Mark the beginning of a new page.
-    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 612, 792), nil);
     
     // Get the graphics context.
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
@@ -63,9 +46,45 @@
     CFRelease(frameRef);
     CFRelease(stringRef);
     CFRelease(framesetter);
+}
+
++(void)drawPDF:(NSString*)fileName
+{
+    // Create the PDF context using the default page size of 612 x 792.
+    UIGraphicsBeginPDFContextToFile(fileName, CGRectZero, nil);
+    // Mark the beginning of a new page.
+    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 612, 792), nil);
+    
+    CGPoint from = CGPointMake(0, 0);
+    CGPoint to = CGPointMake(200, 300);
+    [PDFRenderer drawLineFromPoint:from toPoint:to];
+    
+    [self drawText:fileName];
     
     // Close the PDF context and write the contents out.
     UIGraphicsEndPDFContext();
+}
++(void)drawLineFromPoint:(CGPoint)from toPoint:(CGPoint)to
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetLineWidth(context, 2.0);
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    
+    CGFloat components[] = {0.2, 0.2, 0.2, 0.3};
+    
+    CGColorRef color = CGColorCreate(colorspace, components);
+    
+    CGContextSetStrokeColorWithColor(context, color);
+    
+    
+    CGContextMoveToPoint(context, from.x, from.y);
+    CGContextAddLineToPoint(context, to.x, to.y);
+    
+    CGContextStrokePath(context);
+    CGColorSpaceRelease(colorspace);
+    CGColorRelease(color);
     
 }
 

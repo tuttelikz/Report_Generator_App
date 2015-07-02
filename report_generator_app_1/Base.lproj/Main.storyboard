@@ -364,6 +364,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVy-it-lik">
+                                <rect key="frame" x="16" y="474" width="304" height="66"/>
+                                <state key="normal" title="Войти под другим email">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginNewButtonPressed:" destination="4Mi-7p-48r" eventType="touchUpInside" id="QDR-e1-TfT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-hx-iAV">
                                 <rect key="frame" x="16" y="434" width="304" height="66"/>
                                 <state key="normal" title="Посмотреть отчет в PDF">
@@ -371,7 +381,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pdfButtonPressed:" destination="4Mi-7p-48r" eventType="touchUpInside" id="icE-IU-bcz"/>
+                                    <action selector="pdfButtonPressed:" destination="4Mi-7p-48r" eventType="touchUpInside" id="uYB-9X-uh6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff1-TM-flf">
@@ -397,16 +407,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bitmap_letter.png" translatesAutoresizingMaskIntoConstraints="NO" id="XyT-dc-eig">
                                 <rect key="frame" x="125" y="161" width="86" height="78"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVy-it-lik">
-                                <rect key="frame" x="16" y="494" width="304" height="66"/>
-                                <state key="normal" title="Войти под другим email">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginNewButtonPressed:" destination="4Mi-7p-48r" eventType="touchUpInside" id="QDR-e1-TfT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.61960784313725492" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -414,31 +414,31 @@
                     <connections>
                         <outlet property="destinationMailLabel" destination="7m1-2W-Dnv" id="s0i-8P-LrH"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="fromFinalToFirstSegue" id="bIR-gi-eyS"/>
-                        <segue destination="Yl4-kI-8HQ" kind="push" identifier="fromFinalToPdf" id="xTf-Tg-3Bj"/>
+                        <segue destination="Wf9-qA-Qwc" kind="push" identifier="fromFinalToPdf" id="QmM-05-e4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrQ-WK-ZA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3289" y="352"/>
+            <point key="canvasLocation" x="3303" y="352"/>
         </scene>
         <!--Pdf Doc View Controller-->
-        <scene sceneID="cmI-tk-Adt">
+        <scene sceneID="BE2-ds-Cfu">
             <objects>
-                <viewController id="Yl4-kI-8HQ" customClass="PdfDocViewController" sceneMemberID="viewController">
+                <viewController id="Wf9-qA-Qwc" customClass="PdfDocViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i2Z-u4-Ijd"/>
-                        <viewControllerLayoutGuide type="bottom" id="noz-4b-axG"/>
+                        <viewControllerLayoutGuide type="top" id="gnJ-6n-VL0"/>
+                        <viewControllerLayoutGuide type="bottom" id="xyx-Gl-yTh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TxX-gT-QFF">
+                    <view key="view" contentMode="scaleToFill" id="0ax-hh-tOc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nag-JF-2uo"/>
+                    <navigationItem key="navigationItem" id="4t3-cH-SBk"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6tb-wK-GAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dus-sQ-q0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676" y="352"/>
+            <point key="canvasLocation" x="3738" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LGH-IO-7dN">
